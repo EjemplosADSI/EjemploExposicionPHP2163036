@@ -10,7 +10,14 @@
 <body>
     <h1>Ejemplos de PHP Parte 1</h1>
     <?php
-        function calcularOperaciones($num1, $num2){
+        
+        function foo(iterable $iterable) {
+            foreach ($iterable as $valor) {
+                echo $valor."</br>";
+            } 
+        }
+
+        /*function calcularOperaciones(int $num1, int $num2){
             $operaciones = [
                 "Suma" => $num1 + $num2,
                 "Resta" => $num1 - $num2,
@@ -18,18 +25,20 @@
                 "Division" => $num1 / $num2,
             ];
             return $operaciones;
-        }
+        }*/
 
-        echo "<h3> El resultado de las operaciones es: </h3>";
-        $arrOperaciones = calcularOperaciones(8, 4);
+        //echo "<h3> El resultado de las operaciones es: </h3>";
+        //$arrOperaciones = calcularOperaciones(8, 4);
 
-        foreach ($arrOperaciones as $clave => $valor){
+        /*foreach ($arrOperaciones as $clave => $valor){
             echo "La operacion ".$clave." el resultado es: ".$valor." </br>";
-        }
+        }*/
 
-        echo "<pre>";
+        var_dump(foo(["Hola", "Mundo"]));
+
+        /*echo "<pre>";
         var_dump($arrOperaciones);
-        echo "</pre>";
+        echo "</pre>";*/
         ?>
 </body>
 </html>
